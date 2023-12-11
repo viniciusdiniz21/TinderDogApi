@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Dominio.Entities;
+using Dominio;
 
 namespace Dados.EntityFramework.Configuration
 {
@@ -35,8 +36,8 @@ namespace Dados.EntityFramework.Configuration
                .HasColumnType("char")
                ;
             builder.HasOne(u => u.Animal)
-               .WithMany()
-               .HasForeignKey(a => a.AnimalId)
+               .WithOne(u => u.Usuario)
+               .HasForeignKey<Animal>(a => a.UsuarioId)
                .OnDelete(DeleteBehavior.Restrict);
 
         }

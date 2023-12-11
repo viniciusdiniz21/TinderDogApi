@@ -45,11 +45,6 @@ namespace Dados.EntityFramework.Configuration
                .HasColumnName("FOTO")
                .HasColumnType("varchar(255)")
                ;
-            builder
-               .Property(x => x.UsuarioId)
-               .HasColumnName("USUARIOID")
-               .HasColumnType("int")
-               ;
 
             builder.HasOne(a => a.Porte)
               .WithMany()

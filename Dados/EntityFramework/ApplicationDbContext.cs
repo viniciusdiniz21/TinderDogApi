@@ -13,10 +13,10 @@ namespace Dados.EntityFramework
 {
     public class ApplicationDbContext : DbContext
     {
-        public ApplicationDbContext()
-        {
+        //public ApplicationDbContext()
+        //{
 
-        }
+        //}
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
@@ -36,9 +36,9 @@ namespace Dados.EntityFramework
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(@"Data source = 201.62.57.93,1434; 
-                                    Database = BD044748; 
-                                    User ID = RA044748; 
-                                    Password = 044748;
+                                    Database = BD047106; 
+                                    User ID = RA047106; 
+                                    Password = 047106;
                                     TrustServerCertificate=True");
         }
 
