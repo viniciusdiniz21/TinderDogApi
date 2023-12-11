@@ -1,6 +1,7 @@
 ﻿using Dados.EntityFramework;
 using Dados.Interface;
 using Dominio.Entities;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,9 +18,9 @@ namespace Dados.Repositorio
             _applicationDbContext = applicationDbContext;
         }
 
-        public Usuario BuscarUsuario(string usuario)
+        public async Task<Usuario> BuscarUsuario(string usuario)
         {
-            return _applicationDbContext.Usuario.FirstOrDefault(u => u.Nome == usuario);
+            return await _applicationDbContext.Usuario.AsNoTracking().Include(u => u.Animal).Where(u => u.Nome == usuario).FirstOrDefaultAsync() ;
         }
 
         public async Task<Usuario> Cadastrar(Usuario usuario)

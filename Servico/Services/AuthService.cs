@@ -12,9 +12,9 @@ namespace Servico.Services
     public class AuthService : IAuthService
     {
         private readonly IAuthRepositorio _authRepositorio;
-        public Usuario BuscarUsuario(string usuario)
+        public async Task<Usuario> BuscarUsuario(string usuario)
         {
-           return _authRepositorio.BuscarUsuario(usuario);
+           return await _authRepositorio.BuscarUsuario(usuario);
         }
 
         public Task<Usuario> Cadastrar(Usuario usuario)

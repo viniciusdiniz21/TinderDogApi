@@ -27,13 +27,13 @@ namespace Servico.Services
 
         public bool Adicionar(Animal ent)
         {
-            var raca = _racaRepositorio.BuscarPorId(ent.RacaId);
-            if (raca == null) ent.Raca = null;
-            ent.Raca = raca;
+            //var raca = _racaRepositorio.BuscarPorId(ent.RacaId);
+            //if (raca == null) ent.Raca = null;
+            //ent.Raca = raca;
             
-            var porte = _porteRepositorio.BuscarPorId(ent.PorteId);
-            if (porte == null) ent.Porte = null;
-            ent.Porte = porte;
+            //var porte = _porteRepositorio.BuscarPorId(ent.PorteId);
+            //if (porte == null) ent.Porte = null;
+            //ent.Porte = porte;
 
             return _animalRepositorio.Adicionar(ent);
         }
@@ -52,7 +52,7 @@ namespace Servico.Services
             return _animalRepositorio.Atualizar(ent);
         }
 
-        public  List<Animal> Listar()
+        public Task<List<Animal>> Listar()
         {
             return _animalRepositorio.Listar();
         }

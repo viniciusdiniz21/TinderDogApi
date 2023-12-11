@@ -6,6 +6,6 @@ namespace Dados.Interface
     public interface IAuthRepositorio 
     {
         Task<Usuario> Cadastrar(Usuario usuario);
-        Usuario BuscarUsuario(string usuario);
+        Task<Usuario> BuscarUsuario(string usuario);
     }
 }

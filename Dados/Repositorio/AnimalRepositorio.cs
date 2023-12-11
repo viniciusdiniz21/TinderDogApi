@@ -28,9 +28,9 @@ namespace Dados.Repositorio
             return  Db.Animal.Where(a => a.UsuarioId == usuarioId).FirstOrDefault();
         }
 
-        public  List<Animal> Listar()
+        public async Task<List<Animal>> Listar()
         {
-            return  Db.Animal.ToList();
+            return await Db.Animal.AsNoTracking().Include(a => a.Raca).Include(a => a.Porte).ToListAsync();
         }
     }
 }

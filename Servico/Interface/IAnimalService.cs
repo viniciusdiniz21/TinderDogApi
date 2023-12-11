@@ -10,7 +10,7 @@ namespace Servico.Interface
 {
     public interface IAnimalService
     {
-        public List<Animal> Listar();
+        public Task<List<Animal>> Listar();
         public Animal BuscarPorId(int id);
         public Animal BuscarPorUsuarioId(int usuarioId);
         public bool Adicionar(Animal ent);

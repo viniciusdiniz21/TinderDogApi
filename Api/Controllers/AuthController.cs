@@ -47,7 +47,7 @@ namespace WebApp.Controllers
             if (!ModelState.IsValid)
                 return BadRequest("Dados inválidos");
 
-            var user = _authRepositorio.BuscarUsuario(usuario.Usuario);
+            var user = await _authRepositorio.BuscarUsuario(usuario.Usuario);
             if (user == null)
             {
                 return BadRequest("Usuário não encontrado");

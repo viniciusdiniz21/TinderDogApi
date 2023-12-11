@@ -21,9 +21,9 @@ namespace WebApp.Controllers
         }
 
         [HttpGet]
-        public ActionResult<List<Animal>> Buscar()
+        public async Task<ActionResult<List<Animal>>> Buscar()
         {
-            var objeto = _animalService.Listar();
+            var objeto = await _animalService.Listar();
 
             return Ok(objeto);
         }

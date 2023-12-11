@@ -10,6 +10,6 @@ namespace Servico.Interface
     public interface IAuthService
     {
         Task<Usuario> Cadastrar(Usuario usuario);
-        Usuario BuscarUsuario(string usuario);
+        Task<Usuario> BuscarUsuario(string usuario);
     }
 }
