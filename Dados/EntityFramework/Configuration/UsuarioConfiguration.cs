@@ -36,7 +36,7 @@ namespace Dados.EntityFramework.Configuration
                .HasColumnType("char")
                ;
             builder.HasOne(u => u.Animal)
-               .WithOne(u => u.Usuario)
+               .WithOne()
                .HasForeignKey<Animal>(a => a.UsuarioId)
                .OnDelete(DeleteBehavior.Restrict);
 

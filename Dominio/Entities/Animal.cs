@@ -19,7 +19,6 @@ namespace Dominio
         public DateTime DataNascimento { get; set; }
         public Raca? Raca { get; set; }
         public Porte? Porte { get; set; }
-        public Usuario? Usuario { get; set; }
         public List<Curtida>? Curtida { get; set; }
     }
 }

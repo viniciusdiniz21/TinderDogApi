@@ -21,7 +21,7 @@ namespace Dados.EntityFramework.Configuration
 
             // Relacionamento com a tabela Curtida
             builder.HasMany(m => m.Mensagens)
-                .WithOne(m => m.Match)
+                .WithOne()
                 .HasForeignKey(m => m.MatchId)
                 .IsRequired();
 

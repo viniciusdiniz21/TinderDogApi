@@ -20,7 +20,7 @@ namespace Dados.Repositorio
 
         public async Task<Usuario> BuscarUsuario(string usuario)
         {
-            return await _applicationDbContext.Usuario.AsNoTracking().Include(u => u.Animal).Where(u => u.Nome == usuario).FirstOrDefaultAsync() ;
+            return await _applicationDbContext.Usuario.AsNoTracking().Include(u => u.Animal).ThenInclude(c => c.Curtida).Where(u => u.Nome == usuario).FirstOrDefaultAsync() ;
         }
 
         public async Task<Usuario> Cadastrar(Usuario usuario)

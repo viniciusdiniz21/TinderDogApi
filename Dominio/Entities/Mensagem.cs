@@ -10,7 +10,6 @@ namespace Dominio.Entities
     {
         public string Conteudo { get; set; }
         public int MatchId { get; set; }
-        public Match Match { get; set; }
         public int Cachorro1 { get; set; }
         public int Cachorro2 { get; set; }
         public DateTime DataHora { get; set; }
