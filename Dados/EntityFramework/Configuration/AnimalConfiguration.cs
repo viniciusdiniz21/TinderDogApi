@@ -1,14 +1,14 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using PSF.Dominio;
-using PSF.Dominio.Entities;
+using Dominio;
+using Dominio.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PSF.Dados.EntityFramework.Configuration
+namespace Dados.EntityFramework.Configuration
 {
     public class AnimalConfiguration : IEntityTypeConfiguration<Animal>
     {
@@ -45,6 +45,11 @@ namespace PSF.Dados.EntityFramework.Configuration
                .HasColumnName("FOTO")
                .HasColumnType("varchar(255)")
                ;
+            builder
+               .Property(x => x.UsuarioId)
+               .HasColumnName("USUARIOID")
+               .HasColumnType("int")
+               ;
 
             builder.HasOne(a => a.Porte)
               .WithMany()
@@ -54,11 +59,6 @@ namespace PSF.Dados.EntityFramework.Configuration
             builder.HasOne(a => a.Raca)
                    .WithMany()
                    .HasForeignKey(a => a.RacaId)
-                   .OnDelete(DeleteBehavior.Restrict);
-
-            builder.HasOne(a => a.Usuario)
-                   .WithMany()
-                   .HasForeignKey(a => a.UsuarioId)
                    .OnDelete(DeleteBehavior.Restrict);
 
             builder.HasMany(e => e.Curtida)

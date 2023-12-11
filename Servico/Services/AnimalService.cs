@@ -1,14 +1,14 @@
-﻿using PSF.Dados.Interface;
-using PSF.Dominio;
-using PSF.Dominio.Entities;
-using PSF.Servico.Interface;
+﻿using Dados.Interface;
+using Dominio;
+using Dominio.Entities;
+using Servico.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PSF.Servico.Services
+namespace Servico.Services
 {
     public class AnimalService : IAnimalService
     {
@@ -34,10 +34,6 @@ namespace PSF.Servico.Services
             var porte = _porteRepositorio.BuscarPorId(ent.PorteId);
             if (porte == null) ent.Porte = null;
             ent.Porte = porte;
-
-            var usuario = _usuarioRepositorio.BuscarPorId(ent.UsuarioId);
-            if (usuario == null) ent.Usuario = null;
-            ent.Usuario = usuario;
 
             return _animalRepositorio.Adicionar(ent);
         }

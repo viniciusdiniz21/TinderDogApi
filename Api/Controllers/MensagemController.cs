@@ -1,10 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using PSF.Dados.EntityFramework;
-using PSF.Dominio.Entities;
-using PSF.Servico.Interface;
+using Dados.EntityFramework;
+using Dominio.Entities;
+using Servico.Interface;
 
-namespace PSF.WebApp.Controllers
+namespace WebApp.Controllers
 {
     [Route("[controller]")]
     [ApiController]

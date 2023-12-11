@@ -1,13 +1,13 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using PSF.Dominio.Entities;
+using Dominio.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PSF.Dados.EntityFramework.Configuration
+namespace Dados.EntityFramework.Configuration
 {
     public class CurtidaConfiguration : IEntityTypeConfiguration<Curtida>
     {

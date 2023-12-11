@@ -1,11 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using PSF.Dados.EntityFramework;
-using PSF.Dominio.Entities;
-using PSF.Servico.Interface;
-using PSF.Servico.Services;
+using Dados.EntityFramework;
+using Dominio.Entities;
+using Servico.Interface;
+using Servico.Services;
 
-namespace PSF.WebApp.Controllers
+namespace WebApp.Controllers
 {
     [Route("[controller]")]
     [ApiController]
@@ -18,24 +18,24 @@ namespace PSF.WebApp.Controllers
             _racaService = racaService;
         }
 
-        public IActionResult Index()
-        {
-            var resultado = _racaService.Listar();
-            return View(resultado);
-        }
-        [Route("Inserir")]
-        public IActionResult Inserir()
-        {
-            var ent = new Raca();
-            return View(ent);
-        }
+        //public IActionResult Index()
+        //{
+        //    var resultado = _racaService.Listar();
+        //    return View(resultado);
+        //}
+        //[Route("Inserir")]
+        //public IActionResult Inserir()
+        //{
+        //    var ent = new Raca();
+        //    return View(ent);
+        //}
 
-        [HttpPost]
-        public IActionResult InserirConfirmar(Raca ent)
-        {
-            _racaService.Adicionar(ent);
-            return RedirectToAction("Index");
-        }
+        //[HttpPost]
+        //public IActionResult InserirConfirmar(Raca ent)
+        //{
+        //    _racaService.Adicionar(ent);
+        //    return RedirectToAction("Index");
+        //}
 
         [HttpPost]
         [Route("Adicionar")]

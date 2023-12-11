@@ -1,11 +1,10 @@
 ﻿using Microsoft.IdentityModel.Tokens;
-using NuGet.Configuration;
-using PSF.Dominio.Entities;
+using Dominio.Entities;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 
-namespace PSF.WebApp.Helpers
+namespace WebApp.Helpers
 {
     public static class TokenService
     {

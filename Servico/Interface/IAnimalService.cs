@@ -1,12 +1,12 @@
-﻿using PSF.Dominio;
-using PSF.Dominio.Entities;
+﻿using Dominio;
+using Dominio.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PSF.Servico.Interface
+namespace Servico.Interface
 {
     public interface IAnimalService
     {

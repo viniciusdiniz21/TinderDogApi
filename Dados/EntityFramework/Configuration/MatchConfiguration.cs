@@ -5,9 +5,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using PSF.Dominio.Entities;
+using Dominio.Entities;
 
-namespace PSF.Dados.EntityFramework.Configuration
+namespace Dados.EntityFramework.Configuration
 {
     public class MatchConfiguration : IEntityTypeConfiguration<Match>
     {

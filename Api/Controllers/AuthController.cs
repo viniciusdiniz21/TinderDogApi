@@ -1,10 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.CodeAnalysis.Scripting;
-using PSF.Dados.Interface;
-using PSF.Dominio.Entities;
-using PSF.WebApp.Helpers;
+using Dados.Interface;
+using Dominio.Entities;
+using WebApp.Helpers;
 
-namespace PSF.WebApp.Controllers
+namespace WebApp.Controllers
 {
     [Route("[controller]")]
     [ApiController]

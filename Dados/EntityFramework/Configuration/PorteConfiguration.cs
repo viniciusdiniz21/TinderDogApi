@@ -1,4 +1,4 @@
-﻿using PSF.Dominio.Entities;
+﻿using Dominio.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 
-namespace PSF.Dados.EntityFramework.Configuration
+namespace Dados.EntityFramework.Configuration
 {
     public class PorteConfiguration : IEntityTypeConfiguration<Porte>
     {
@@ -27,7 +27,7 @@ namespace PSF.Dados.EntityFramework.Configuration
             builder
                 .Property(x => x.Tamanho)
                 .HasColumnName("TAMANHO")
-                .HasColumnType("decimal(15)")
+                .HasColumnType("string")
                 ;
             builder
                .Property(x => x.Sigla)

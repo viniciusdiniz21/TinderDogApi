@@ -1,7 +1,7 @@
-﻿using PSF.Dominio.Entities;
+﻿using Dominio.Entities;
 
 
-namespace PSF.Dados.Interface
+namespace Dados.Interface
 {
     public interface IAuthRepositorio 
     {

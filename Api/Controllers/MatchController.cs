@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using PSF.Dominio.Entities;
-using PSF.Servico.Interface;
+using Dominio.Entities;
+using Servico.Interface;
 
-namespace PSF.WebApp.Controllers
+namespace WebApp.Controllers
 {
     [Route("[controller]")]
     [ApiController]

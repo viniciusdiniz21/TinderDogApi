@@ -5,15 +5,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PSF.Dominio.Entities
+namespace Dominio.Entities
 {
     public class Usuario : Entity
     {
         public string Nome{ get; set; }
         public string Senha { get; set; }
-        public List<Animal> Animais { get; set; }
+        public int AnimalId { get; set; }
+        public Animal Animal { get; set; }
         public List<Match> Matchs { get; set; }
-        public bool Ativo { get; set; }
 
     }
 }

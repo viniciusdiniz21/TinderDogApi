@@ -1,13 +1,13 @@
-﻿using PSF.Dados.Interface;
-using PSF.Dominio.Entities;
-using PSF.Servico.Interface;
+﻿using Dados.Interface;
+using Dominio.Entities;
+using Servico.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PSF.Servico.Services
+namespace Servico.Services
 {
     public class UsuarioService : IUsuarioService
     {

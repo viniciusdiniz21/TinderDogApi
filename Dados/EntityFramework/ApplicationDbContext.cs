@@ -5,11 +5,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using PSF.Dominio.Entities;
-using PSF.Dados.EntityFramework.Configuration;
-using PSF.Dominio;
+using Dados.EntityFramework.Configuration;
+using Dominio;
+using Dominio.Entities;
 
-namespace PSF.Dados.EntityFramework
+namespace Dados.EntityFramework
 {
     public class ApplicationDbContext : DbContext
     {

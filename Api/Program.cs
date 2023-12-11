@@ -1,8 +1,16 @@
+using Dados.EntityFramework;
 using Interno.Api.Configuracoes;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(@"Data source = 201.62.57.93,1434; 
+                                    Database = BD044748; 
+                                    User ID = RA044748; 
+                                    Password = 044748;
+                                    TrustServerCertificate=True")
+);
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -13,12 +21,7 @@ builder.Services.AddCors(p => p.AddPolicy("corsapp", builder =>
     builder.WithOrigins("*").AllowAnyMethod().AllowAnyHeader();
 }));
 
-builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(@"Data source = 201.62.57.93,1434; 
-                                    Database = BD044748; 
-                                    User ID = RA044748; 
-                                    Password = 044748;
-                                    TrustServerCertificate=True")
-);
+
 
 builder.Services.ResolveDependencies();
 

@@ -1,4 +1,4 @@
-﻿namespace PSF.WebApp.Helpers
+﻿namespace WebApp.Helpers
 {
     public static class Settings
     {

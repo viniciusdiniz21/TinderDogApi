@@ -1,10 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using PSF.Dados.EntityFramework;
-using PSF.Dados.Interface;
-using PSF.Dados.Repositorio;
-using PSF.Servico.Interface;
-using PSF.Servico.Services;
+using Dados.EntityFramework;
+using Dados.Interface;
+using Dados.Repositorio;
+using Servico.Interface;
+using Servico.Services;
 
     namespace Interno.Api.Configuracoes
     {
