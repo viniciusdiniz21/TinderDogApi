@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Dados.Repositorio
 {
-    public class MensagemRepositorio : Repositorio<Mensagem>
+    public class MensagemRepositorio : Repositorio<Mensagem>, IMensagemRepositorio
     {
         public MensagemRepositorio(ApplicationDbContext db) : base(db)
         {

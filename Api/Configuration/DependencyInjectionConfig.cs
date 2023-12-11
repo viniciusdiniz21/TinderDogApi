@@ -29,6 +29,8 @@ using Servico.Services;
                 services.AddScoped<IAuthService, AuthService>();
                 services.AddScoped<ICurtidaService, CurtidaService>();
                 services.AddScoped<ICurtidaRepositorio, CurtidaRepositorio>();
+                services.AddScoped<IMensagemService, MensagemService>();
+                services.AddScoped<IMensagemRepositorio, MensagemRepositorio>();
 
 
 

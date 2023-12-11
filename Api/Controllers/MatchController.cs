@@ -14,11 +14,11 @@ namespace WebApp.Controllers
             _matchService = matchService;
         }
 
-        //[HttpGet]
-        //public List<Match> Listar()
-        //{
-        //    return _matchService.Listar();
-        //} 
+        [HttpGet]
+        public List<Match> Listar()
+        {
+            return _matchService.Listar();
+        }
 
         //[HttpGet]
         //[Route("BuscarPorUsuarioId")]

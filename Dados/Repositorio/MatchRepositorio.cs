@@ -23,7 +23,7 @@ namespace Dados.Repositorio
 
         public List<Match> Listar()
         {
-            return Db.Match.AsNoTracking().ToList();
+            return Db.Match.AsNoTracking().Include(a => a.Mensagens).ToList();
         }
     }
 }

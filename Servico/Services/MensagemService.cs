@@ -9,20 +9,20 @@ using System.Text;
 using System.Threading.Tasks;
 namespace Servico.Services
 {
-    internal class MensagemService : IMensagemService
+    public class MensagemService : IMensagemService
     {
-        private readonly IMensagemService _mensagemService;
+        private readonly IMensagemRepositorio _mensagemRepositorio;
 
-        public MensagemService(IMensagemService mensagemService)
+        public MensagemService(IMensagemRepositorio mensagemRepositorio)
         {
-            _mensagemService = mensagemService;
+            _mensagemRepositorio = mensagemRepositorio;
         }
 
        
 
         public bool AdicionarMensagem(Mensagem Men)
         {
-            return _mensagemService.AdicionarMensagem(Men);
+            return _mensagemRepositorio.Adicionar(Men);
         }
 
         

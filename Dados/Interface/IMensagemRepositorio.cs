@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Dados.Interface
 {
-    public interface IMensagemRepositorio : IDisposable
+    public interface IMensagemRepositorio : IRepositorio<Mensagem>
     {
     }
 }

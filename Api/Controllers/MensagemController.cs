@@ -26,7 +26,7 @@ namespace WebApp.Controllers
         public ActionResult<Mensagem> AdicionarMensagem(Mensagem men)
         {
             if (men == null || !ModelState.IsValid)
-                return BadRequest(BadRequest());
+                return BadRequest();
 
             var result =  _mensagemService.AdicionarMensagem(men);
 
