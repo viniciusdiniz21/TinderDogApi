@@ -10,5 +10,6 @@ namespace Dados.Interface
     public interface IPorteRepositorio : IRepositorio<Porte>
     {
         public Porte BuscarPorId(int id);
+        public List<Porte> Listar();
     }
 }

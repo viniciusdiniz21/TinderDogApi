@@ -19,7 +19,7 @@ namespace Dados.Repositorio
 
         public Usuario BuscarUsuario(string usuario)
         {
-            return _applicationDbContext.Usuario.Where(u => u.Nome == usuario).FirstOrDefault();
+            return _applicationDbContext.Usuario.FirstOrDefault(u => u.Nome == usuario);
         }
 
         public async Task<Usuario> Cadastrar(Usuario usuario)

@@ -42,6 +42,10 @@ namespace Servico.Services
         {
             return _animalRepositorio.BuscarPorId(id);
         }
+        public Animal BuscarPorUsuarioId(int usuarioId)
+        {
+            return _animalRepositorio.BuscarPorUsuarioId(usuarioId);
+        }
 
         public bool Editar(Animal ent)
         {

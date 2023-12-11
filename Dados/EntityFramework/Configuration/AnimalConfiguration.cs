@@ -59,7 +59,8 @@ namespace Dados.EntityFramework.Configuration
             builder.HasMany(e => e.Curtida)
                     .WithOne()
                     .HasForeignKey(e => e.AnimalId)
-                    .HasPrincipalKey(e => e.Id);
+                    .HasPrincipalKey(e => e.Id)
+                    ;
         }
     }
 }

@@ -24,12 +24,19 @@ namespace WebApp.Controllers
 
         [HttpPost]
         [Route("Cadastrar")]
-        public async Task<ActionResult<Usuario>> Cadastrar(Usuario usuario)
+        public async Task<ActionResult<Usuario>> Cadastrar([FromBody] LoginDTO usuario)
         {
+            var user = new Usuario();
+            user.Nome = usuario.Usuario;
+            user.Senha = usuario.Senha;
+            user.Animal = null;
+            user.Token = null;
+            user.Matchs = null;
+            user.Ativo = true;
             if (!ModelState.IsValid)
                 return BadRequest("Dados inválidos");
             //usuario.Senha = BCrypt.Net.BCrypt.HashPassword(usuario.Senha);
-            var result = await _authRepositorio.Cadastrar(usuario);
+            var result = await _authRepositorio.Cadastrar(user);
             return Ok(result);
         }
 
@@ -53,7 +60,9 @@ namespace WebApp.Controllers
             if (user.Senha != usuario.Senha) return BadRequest("Credenciais Inválidas");
             string token = TokenService.GenerateToken(user);
 
-            return Ok(token);
+            user.Token = token;
+
+            return Ok(user);
         }
 
     }

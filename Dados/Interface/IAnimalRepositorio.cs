@@ -12,5 +12,6 @@ namespace Dados.Interface
     {
         public List<Animal> Listar();
         public Animal BuscarPorId(int id);
+        public Animal BuscarPorUsuarioId(int usuarioId);
     }
 }

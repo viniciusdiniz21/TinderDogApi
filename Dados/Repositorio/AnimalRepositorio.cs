@@ -22,6 +22,11 @@ namespace Dados.Repositorio
         {
             return  Db.Animal.Where(a => a.Id == id).FirstOrDefault();
         }
+        
+        public Animal BuscarPorUsuarioId(int usuarioId)
+        {
+            return  Db.Animal.Where(a => a.UsuarioId == usuarioId).FirstOrDefault();
+        }
 
         public  List<Animal> Listar()
         {

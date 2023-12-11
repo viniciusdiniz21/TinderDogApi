@@ -18,24 +18,18 @@ namespace WebApp.Controllers
             _racaService = racaService;
         }
 
-        //public IActionResult Index()
-        //{
-        //    var resultado = _racaService.Listar();
-        //    return View(resultado);
-        //}
-        //[Route("Inserir")]
-        //public IActionResult Inserir()
-        //{
-        //    var ent = new Raca();
-        //    return View(ent);
-        //}
+        [HttpGet]
+        public List<Raca> Listar()
+        {
+            return _racaService.Listar();
+        }
 
-        //[HttpPost]
-        //public IActionResult InserirConfirmar(Raca ent)
-        //{
-        //    _racaService.Adicionar(ent);
-        //    return RedirectToAction("Index");
-        //}
+        [HttpGet]
+        [Route("BuscarPorId")]
+        public Raca Buscar(int id)
+        {
+            return _racaService.BuscarPorId(id);
+        }
 
         [HttpPost]
         [Route("Adicionar")]
@@ -45,15 +39,6 @@ namespace WebApp.Controllers
             return Ok(result);
         }
 
-        //public IActionResult Excluir(int id)
-        //{
-        //    var objeto = _racaService.BuscarPorId(id);
-        //    objeto.Ativo = false;
-
-        //    _racaService.Editar(objeto);
-
-        //    return RedirectToAction("Index");
-        //}
 
     }
 

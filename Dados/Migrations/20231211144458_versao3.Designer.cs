@@ -4,6 +4,7 @@ using Dados.EntityFramework;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Dados.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231211144458_versao3")]
+    partial class versao3
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -62,7 +64,7 @@ namespace Dados.Migrations
                     b.HasIndex("UsuarioId")
                         .IsUnique();
 
-                    b.ToTable("Animal", (string)null);
+                    b.ToTable("Animal");
                 });
 
             modelBuilder.Entity("Dominio.Entities.Curtida", b =>
@@ -89,7 +91,7 @@ namespace Dados.Migrations
 
                     b.HasIndex("AnimalId");
 
-                    b.ToTable("Curtida", (string)null);
+                    b.ToTable("Curtida");
                 });
 
             modelBuilder.Entity("Dominio.Entities.Match", b =>
@@ -116,7 +118,7 @@ namespace Dados.Migrations
 
                     b.HasIndex("UsuarioId");
 
-                    b.ToTable("Match", (string)null);
+                    b.ToTable("Match");
                 });
 
             modelBuilder.Entity("Dominio.Entities.Mensagem", b =>
@@ -150,7 +152,7 @@ namespace Dados.Migrations
 
                     b.HasIndex("MatchId");
 
-                    b.ToTable("Mensagem", (string)null);
+                    b.ToTable("Mensagem");
                 });
 
             modelBuilder.Entity("Dominio.Entities.Porte", b =>
@@ -174,7 +176,7 @@ namespace Dados.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Portes", (string)null);
+                    b.ToTable("Portes");
                 });
 
             modelBuilder.Entity("Dominio.Entities.Raca", b =>
@@ -202,7 +204,7 @@ namespace Dados.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Raca", (string)null);
+                    b.ToTable("Raca");
                 });
 
             modelBuilder.Entity("Dominio.Entities.Usuario", b =>
@@ -229,7 +231,7 @@ namespace Dados.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Usuario", (string)null);
+                    b.ToTable("Usuario");
                 });
 
             modelBuilder.Entity("Dominio.Animal", b =>

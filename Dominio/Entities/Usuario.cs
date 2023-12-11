@@ -10,7 +10,8 @@ namespace Dominio.Entities
     {
         public string Nome { get; set; }
         public string Senha { get; set; }
-        public Animal Animal { get; set; }
-        public List<Match> Matchs { get; set; }
+        public string? Token { get; set; }
+        public Animal? Animal { get; set; }
+        public List<Match>? Matchs { get; set; }
     }
 }

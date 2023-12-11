@@ -18,6 +18,13 @@ namespace WebApp.Controllers
         }
 
         [HttpGet]
+        public List<Porte> Listar()
+        {
+            return _porteService.Listar();
+        }
+
+        [HttpGet]
+        [Route("BuscarPorId")]
         public Porte Buscar(int id)
         {
             return _porteService.BuscarPorId(id);
@@ -28,6 +35,7 @@ namespace WebApp.Controllers
         public ActionResult<bool> Adicionar(Porte ent)
         {
             var result = _porteService.Adicionar(ent);
+            if (result == false) return BadRequest();
             return Ok(result);
         }
 
