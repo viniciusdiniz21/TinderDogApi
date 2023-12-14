@@ -13,11 +13,13 @@ namespace WebApp.Controllers
     {
         private readonly ICurtidaService _curtidaService;
         private readonly IAnimalService _animalService;
+        private readonly IImagemService _imageService;
 
-        public AnimalController(ICurtidaService curtidaService, IAnimalService animalService)
+        public AnimalController(ICurtidaService curtidaService, IAnimalService animalService, IImagemService imageService)
         {
             _curtidaService = curtidaService;
             _animalService = animalService;
+            _imageService = imageService;
         }
 
         [HttpGet]
@@ -35,6 +37,7 @@ namespace WebApp.Controllers
             if(animal == null)
             {
                 var result = _animalService.Adicionar(ent);
+
                 if(result == false)
                 {
                     return BadRequest("Não foi possível cadastrar cachorro!");
@@ -55,6 +58,11 @@ namespace WebApp.Controllers
             if(objeto == null)
             {
                 return BadRequest();
+            }
+            var imagens = objeto.Imagems;
+            foreach( var imagem in imagens )
+            {
+                _imageService.Adicionar(imagem);
             }
             _animalService.Editar(objeto);
 

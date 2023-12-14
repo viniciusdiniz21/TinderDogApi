@@ -30,7 +30,7 @@ namespace Dados.Repositorio
 
         public async Task<List<Animal>> Listar()
         {
-            return await Db.Animal.AsNoTracking().Include(a => a.Raca).Include(a => a.Porte).ToListAsync();
+            return await Db.Animal.AsNoTracking().Include(a => a.Raca).Include(a => a.Porte).Include(a => a.Imagems).ToListAsync();
         }
     }
 }

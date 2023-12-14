@@ -61,6 +61,11 @@ namespace Dados.EntityFramework.Configuration
                     .HasForeignKey(e => e.AnimalId)
                     .HasPrincipalKey(e => e.Id)
                     ;
+
+            builder.HasMany(e => e.Imagems)
+                    .WithOne()
+                    .HasForeignKey(e => e.AnimalId)
+                    ;
         }
     }
 }

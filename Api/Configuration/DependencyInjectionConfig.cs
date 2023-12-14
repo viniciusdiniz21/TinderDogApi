@@ -31,6 +31,9 @@ using Servico.Services;
                 services.AddScoped<ICurtidaRepositorio, CurtidaRepositorio>();
                 services.AddScoped<IMensagemService, MensagemService>();
                 services.AddScoped<IMensagemRepositorio, MensagemRepositorio>();
+                services.AddScoped<IImagemService, ImagemService>();
+                services.AddScoped<IImagemRepositorio, ImagemRepositorio>();
+
 
 
 
