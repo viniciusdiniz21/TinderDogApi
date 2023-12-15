@@ -11,7 +11,7 @@ namespace Dominio
     {
         public string Nome { get; set; }
         public string Foto { get; set; }
-        public List<Imagem> Imagems { get; set; }
+        public List<Imagem>? Imagems { get; set; }
         public int PorteId { get; set; }
 
         public int RacaId { get; set; }
